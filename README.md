@@ -1,3 +1,2 @@
-# Some golang scripts and excercises
-Learning golang
+# Learning golang
 Some basic scripts and excercises 
