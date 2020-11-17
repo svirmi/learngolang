@@ -15,7 +15,10 @@ func main() {
 		ballCell  = '⚽'
 	)
 
-	var cell rune
+	var (
+		px, py int
+		cell   rune
+	)
 
 	board := make([][]bool, width)
 	for row := range board {
@@ -24,7 +27,7 @@ func main() {
 
 	buf := make([]rune, 0, width*height)
 
-	board[0][0] = true
+	board[px][py] = true
 
 	// draw the board
 	for y := range board[0] {
