@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	start, stop := 'A', 'Z'
+	start, stop := 128512, 128591 // emoji
+	// start, stop := 'A', 'Z'
 
 	fmt.Printf("%-10s %-10s %-10s %-12s\n%s\n",
 		"literal", "dec", "hex", "encoded",
