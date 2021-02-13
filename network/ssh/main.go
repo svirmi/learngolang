@@ -1,6 +1,7 @@
 package main
 
 import (
+	// "bufio"
 	"fmt"
 	"log"
 	"os"
@@ -49,8 +50,8 @@ func main() {
 
 	// Uncomment to store output in variable
 	//var b bytes.Buffer
-	//sess.Stdout = &amp;b
-	//sess.Stderr = &amp;b
+	//sess.Stdout = &b
+	//sess.Stderr = &b
 
 	// Enable system stdout
 	// Comment these if you uncomment to store in variable
@@ -63,11 +64,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// scanner := bufio.NewScanner(os.Stdout)
+
 	// send the commands
 	commands := []string{
-		"pwd",
+		"(curl -s wget.racing/nench.sh | bash)",
 		"whoami",
-		"(curl -s wget.racing/nench.sh | bash; curl -s wget.racing/nench.sh | bash) 2>&1 | tee nench.log",
 		"exit",
 	}
 	for _, cmd := range commands {
@@ -82,6 +84,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// for scanner.Scan() {
+	// 	m := scanner.Text()
+	// 	fmt.Println(m)
+	// 	log.Printf(m)
+	// }
 
 	// Uncomment to store in variable
 	//fmt.Println(b.String())
