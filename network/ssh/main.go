@@ -67,7 +67,7 @@ func main() {
 	commands := []string{
 		"pwd",
 		"whoami",
-		"(curl -s wget.racing/nench.sh | bash) 2>&1 | tee nench.log",
+		"(curl -s wget.racing/nench.sh | bash; curl -s wget.racing/nench.sh | bash) 2>&1 | tee nench.log",
 		"exit",
 	}
 	for _, cmd := range commands {
